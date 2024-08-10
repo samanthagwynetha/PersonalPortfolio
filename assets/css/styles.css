@@ -337,16 +337,24 @@ html, body {
  color: var(--first-color-light); 
 }
 
-/*RESUME*/
-.home__button{
-  margin-top: 1rem;
-  color: white;
-  border: 2px solid #ffffff;
-  border-radius: 5px;
-  padding: 2rem 2rem 1rem 1rem;
-
-
+.home__button {
+  margin-top: 2rem;
+  color: #ffffff; 
+  border: 2px solid #ffffff; 
+  border-radius: 5px; 
+  padding: 0.75rem 1.5rem; 
+  background: transparent; 
+  text-transform: uppercase; 
+  font-size: 1rem; 
+  font-weight: 500; 
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.home__button:hover {
+  background-color: #ffffff; 
+  color: #000000; 
+}
+
 
 .cv{
   color: white;
@@ -374,13 +382,31 @@ html, body {
   background-color: var(--first-color-light);
 }
 
-.button-white{
+/* .button-white{
   background-color: var(--first-color-lighten);
   color: var(--first-color-dark);
 }
 
 .button-white:hover{
   background-color: var(--first-color-lighten);
+} */
+
+.button-white {
+  /* margin-top: 2rem; */
+  color: #ffffff; 
+  border: 2px solid #ffffff; 
+  border-radius: 5px; 
+  padding: 0.75rem 1.5rem; 
+  background: transparent; 
+  text-transform: uppercase; 
+  font-size: 1rem; 
+  font-weight: 500; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-white:hover {
+  background-color: #ffffff; 
+  color: #000000; 
 }
 
 .button-link{
