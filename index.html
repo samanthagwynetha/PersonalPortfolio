@@ -51,18 +51,19 @@
                             <span class="home__greeting">Hello, My name is</span>
                             <h1 class="home__name">Samantha Arsua</h1>
                             <span class="home__profession">Web Developer | Ui/Ux | Graphic Designer</span>
-                            <!-- <a download="" href="assets/cv/Clay-Doe-Cv.pdf" class="button button-light home__button">Download Cv</a> -->
-                            <a download="" href="assets/cv/Clay-Doe-Cv.pdf" class="cv">Download Cv</a>
+                            
+                            <div class="home__social">
+                                <a href="https://www.linkedin.com/in/samanthagwynetha/" class="footer__link"><i class='bx bxl-linkedin' ></i></a>
+                                <a href="https://github.com/samanthagwynetha" class="footer__link"><i class='bx bxl-github' ></i></a>
+                                <a href="https://www.behance.net/samantharsua" class="footer__link"><i class='bx bxl-dribbble' ></i></a>
+                            </div>
+<!-- 
+                             <a download="" href="assets/cv/Clay-Doe-Cv.pdf" class="home__button">Download Cv</a> -->
                         </div>
                     </div>
                     
 
-                    <!-- <div class="home__social">
-                        <a href="#" class="home__social-icon"><i class='bx bxl-facebook' ></i></a>
-                        <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                        <a href="#" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
-                    </div>
-
+<!-- 
                     <div class="home__img">
                         <img src="assets/img/home.jpg" alt="">
                     </div> -->
@@ -73,11 +74,15 @@
             <section class="about section bd-container" id="about">
                 <span class="section-subtitle">My History</span>
                 <h2 class="section-title">About Me</h2>
-
+                
                 <div class="about__container bd-grid">
+                    <img src="assets/img/about1.jpg" alt="" class="about__img">
                     <div class="about__data bd-grid">
-                        <p class="about__description">Hello! I'm Samantha Arsua, a computer science student from Davao City, Philippines, who is passionate about creativity and eager to learn and grow. I have been exploring UI/UX design, web development, mobile development, and graphic design through my studies and personal projects. My experiences with HTML, CSS, JavaScript, Dart, and Flutter have given me a solid foundation, and I am excited to continue improving my skills. I look forward to the opportunity to apply what I've learned and contribute to meaningful projects.</p>
-                    <!-- <img src="assets/img/about.jpg" alt="" class="about__img"> -->
+
+                        <p class="about__description about__text"> Hi there! I'm Samantha Gwyneth Arsua, a dedicated front-end developer and UI/UX designer with a strong passion for creating interfaces that are not only visually appealing but also responsive and user-friendly. I've gained experience with HTML, CSS, JavaScript, and frameworks like React, which help me bring designs to life. I also dabble in graphic design, which allows me to contribute to creating cohesive and attractive visual elements. I'm always eager to learn more and improve my skills as I continue to grow in this field.
+<br><br>
+                            While my SQL skills are still developing, I'm eager to learn and apply them to support data-driven decisions and improve application functionality. Additionally, I have a solid understanding of version control with Git and am familiar with agile development practices. I'm committed to continuous learning and excited to further expand my expertise in both front-end technologies and data management.</p>
+       
                 </div>
             </section>
 
@@ -119,21 +124,21 @@
                     <div class="services__data">
                         <i class='bx bx-palette services__icon' ></i>
                         <h3 class="servics__title">Ui/Ux Design</h3>
-                        <p class="services__description">Service that I offer and work, with years of experience in the work area.</p>
+                        <!-- <p class="services__description">Service that I offer and work, with years of experience in the work area.</p> -->
                         <!-- <a href="#" class="button">Know More</a> -->
                     </div>
 
                     <div class="services__data">
                         <i class='bx bx-laptop services__icon' ></i>
                         <h3 class="servics__title">Web development</h3>
-                        <p class="services__description">Service that I offer and work, with years of experience in the work area.</p>
+                        <!-- <p class="services__description">Service that I offer and work, with years of experience in the work area.</p> -->
                         <!-- <a href="#" class="button">Know More</a> -->
                     </div>
 
                     <div class="services__data">
                         <i class='bx bx-pen services__icon' ></i>
                         <h3 class="servics__title">Graphic Design</h3>
-                        <p class="services__description">Service that I offer and work, with years of experience in the work area.</p>
+                        <!-- <p class="services__description">Service that I offer and work, with years of experience in the work area.</p> -->
                         <!-- <a href="#" class="button">Know More</a> -->
                     </div>
                 </div>
@@ -151,7 +156,7 @@
                         </div>
 
                         <div>
-                             <a href="#" class="button button-white">Hire me</a>
+                             <a href="#contact" class="button button-white">Hire me</a>
                         </div>
                     </div>
                 </div>
@@ -166,67 +171,64 @@
                 <div class="portfolio__nav">
                     <span class="portfolio__item active-portfolio" data-filter="all">All</span>
                     <span class="portfolio__item" data-filter=".web">Web</span>
-                    <span class="portfolio__item" data-filter=".ux">Ui/Ux</span>
+                    <span class="portfolio__item" data-filter=".ux">Design</span>
                     <span class="portfolio__item" data-filter=".app">App</span>
                 </div>
 
                 <div class="portfolio__container bd-grid">
                     <div class="portfolio__content mix web">
-                        <a href="#"><img src="assets/img/work1.jpg" alt="" class="portfolio__img"></a>
+                        <a href="#"><img src="assets/img/website1.jpg" alt="" class="portfolio__img"></a>
                         <div class="portfolio__data">
                             <span class="portfolio__subtitle">Web development</span>
-                            <a href="#"><h2 class="portfolio__title">New portfolio of work done for a client.</h2></a>
-                            <a href="#" class="button button-link">View Details</a>
+                            <a href="#"><h2 class="portfolio__title">Food Recipe Website</h2></a>
+                            <a href="https://github.com/samanthagwynetha/caon" class="button button-link ">View Details</a>
                         </div>
                     </div>
 
                     <div class="portfolio__content mix web">
-                        <a href="#"><img src="assets/img/work2.jpg" alt="" class="portfolio__img"></a>
+                        <a href="#"><img src="assets/img/website2.jpg" alt="" class="portfolio__img"></a>
                         <div class="portfolio__data">
                             <span class="portfolio__subtitle">Web development</span>
-                            <a href="#"><h2 class="portfolio__title">New portfolio of work done for a client.</h2></a>
+                            <a href="#"><h2 class="portfolio__title">Car Rental System</h2></a>
+                            <a href="https://github.com/samanthagwynetha/Car-Rental-System" class="button button-link">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content mix ux">
+                        <a href="#"><img src="assets/img/design1.jpg" alt="" class="portfolio__img"></a>
+                        <div class="portfolio__data">
+                            <span class="portfolio__subtitle">Design</span>
+                            <a href="#"><h2 class="portfolio__title">Image Colorization</h2></a>
                             <a href="#" class="button button-link">View Details</a>
                         </div>
                     </div>
 
                     <div class="portfolio__content mix ux">
-                        <a href="#"><img src="assets/img/work3.jpg" alt="" class="portfolio__img"></a>
+                        <a href="#"><img src="assets/img/design2.jpg" alt="" class="portfolio__img"></a>
                         <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Ux design</span>
-                            <a href="#"><h2 class="portfolio__title">New portfolio of work done for a client.</h2></a>
-                            <a href="#" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content mix ux">
-                        <a href="#"><img src="assets/img/work4.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Ux design</span>
-                            <a href="#"><h2 class="portfolio__title">New portfolio of work done for a client.</h2></a>
+                            <span class="portfolio__subtitle">Design</span>
+                            <a href="#"><h2 class="portfolio__title">Poster </h2></a>
                             <a href="#" class="button button-link">View Details</a>
                         </div>
                     </div>
 
                     <div class="portfolio__content mix app">
-                        <a href="#"><img src="assets/img/work5.jpg" alt="" class="portfolio__img"></a>
+                        <a href="#"><img src="assets/img/app1.jpg" alt="" class="portfolio__img"></a>
                         <div class="portfolio__data">
                             <span class="portfolio__subtitle">Mobile app</span>
-                            <a href="#"><h2 class="portfolio__title">New portfolio of work done for a client.</h2></a>
-                            <a href="#" class="button button-link">View Details</a>
+                            <a href="#"><h2 class="portfolio__title">New Balance Interface</h2></a>
+                            <a href="https://github.com/samanthagwynetha/e-shoes_UI" class="button button-link">View Details</a>
                         </div>
                     </div>
 
                     <div class="portfolio__content mix app">
-                        <a href="#"><img src="assets/img/work6.jpg" alt="" class="portfolio__img"></a>
+                        <a href="#"><img src="assets/img/app2.jpg" alt="" class="portfolio__img"></a>
                         <div class="portfolio__data">
                             <span class="portfolio__subtitle">Mobile app</span>
-                            <a href="#"><h2 class="portfolio__title">New portfolio of work done for a client.</h2></a>
-                            <a href="#" class="button button-link">View Details</a>
+                            <a href="#"><h2 class="portfolio__title">Ventspace</h2></a>
+                            <a href="https://github.com/samanthagwynetha/ventspace" class="button button-link">View Details</a>
                         </div>
                     </div>
-
-
-            
                 </div>
             </section>
             
@@ -241,7 +243,7 @@
                         <div class="contact__box">
                             <i class='bx bx-home contact__icon' ></i>
                             <h3 class="contact__title">Location</h3>
-                            <span class="contact__description">#123 Lima -Peru</span>
+                            <span class="contact__description">Philippines</span>
                         </div>
 
                         <div class="contact__box">
@@ -260,22 +262,22 @@
                             <i class='bx bx-envelope contact__icon' ></i>
                             <h3 class="contact__title">Chat</h3>
                            <div>
-                                <a href="#" class="contact__social"><i class='bx bxl-whatsapp-square' ></i></a>
-                                <a href="#" class="contact__social"><i class='bx bxl-telegram' ></i></a>
-                                <a href="#" class="contact__social"><i class='bx bxl-messenger' ></i></a>
+                                <a href="https://wa.me/qr/ZCD6NUI446RFD1" class="contact__social"><i class='bx bxl-whatsapp-square' ></i></a>
+                                <a href="https://www.instagram.com/gwynthyno/" class="contact__social"><i class='bx bxl-instagram' ></i></a>
+                                <a href="https://m.me/samantha.arsua" class="contact__social"><i class='bx bxl-messenger' ></i></a>
                            </div>
                         </div>
                     </div>
                 
-                    <form action="" class="contact__form">
+                    <form action="https://formspree.io/f/mvgprqnj" method="POST" class="contact__form">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="email" placeholder="Email" class="contact__input">
+                            <input type="text" name="first_name" placeholder="Name" class="contact__input">
+                            <input type="email" name="email" placeholder="Email" class="contact__input" required>
                         </div>
 
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Project" class="contact__input">
-                            <input type="number" placeholder="Number" class="contact__input">
+                            <input type="text" name="project" placeholder="Project" class="contact__input">
+                            <input type="number" name="number" placeholder="Number" class="contact__input">
                         </div>
 
                         <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
@@ -290,14 +292,6 @@
         <footer class="footer">
             <div class="footer__container bd-container">
                 <h1 class="footer__title">Samantha Arsua</h1>
-                <!-- <p class="footer__description">I am Samantha Arsua and this is my personal website, consult me here</p> -->
-                
-                <!-- <div class="footer__social">
-                    <a href="#" class="footer__link"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bxl-github' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bxl-dribbble' ></i></a>
-                </div> -->
-                <!-- <p class="footer__copy">&#169; 2020 Bedimcode. All right reserved</p> -->
             </div>
         </footer>
         
