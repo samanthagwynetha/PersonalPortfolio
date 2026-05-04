@@ -4,7 +4,7 @@
 
 A premium, minimalist personal portfolio designed to showcase my journey as a **Full-Stack Developer** and **UI/UX Designer**. This project reflects my focus on clean code, modern design aesthetics, and user-centered digital solutions.
 
-🔗 **Live Demo:** [samantharsua.dev](https://samanthagwynetha.github.io/PersonalPortfolio) (Replace with your actual link)
+🔗 **Live Demo:** [samantharsua.dev](https://samanthagwynetha.vercel.app/)
 
 ---
 
