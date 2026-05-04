@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | High-End Minimalist</title>
+    <title>Samantha Arsua</title>
+    <link rel="icon" type="image/jpeg" href="assets/img/photo.jpeg">
 
     <!-- CDNs -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,6 +21,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/modern.css">
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
 </head>
 
 <body class="selection:bg-white selection:text-black">
@@ -61,28 +63,38 @@
 
     <main class="relative z-10">
         <!-- 1. HERO SECTION -->
-        <section id="hero" class="min-h-screen flex flex-col justify-center px-6 max-w-7xl mx-auto">
-            <div class="reveal">
-                <!-- Available for Hire Badge -->
-                <div
-                    class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-neutral-900 border border-white/10 mb-8">
-                    <span class="w-2 h-2 rounded-full bg-green-500 dot-pulse"></span>
-                    <span class="text-xs font-semibold tracking-widest uppercase">Available for Hire</span>
-                </div>
+        <section id="hero" class="min-h-screen flex items-center px-6 max-w-7xl mx-auto section-nav">
+            <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+                <div class="reveal">
+                    <!-- Available for Hire Badge -->
+                    <div
+                        class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-neutral-900 border border-white/10 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-green-500 dot-pulse"></span>
+                        <span class="text-xs font-semibold tracking-widest uppercase">Available for Hire</span>
+                    </div>
 
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-none">
-                    SAMANTHA<br /> <span class="text-neutral-700">ARSUA.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl font-light">
-                    Full-Stack Engineer building minimalist, high-performance digital products for the modern web.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects"
-                        class="px-8 py-3 bg-white text-black font-bold hover:bg-gray-200 transition-all text-sm">View My
-                        Work</a>
-                    <a href="assets/cv/Arsua_Resume.pdf" download="Arsua_Resume.pdf"
-                        class="px-8 py-3 border border-white/20 text-white font-bold hover:bg-white/5 transition-all text-sm">Download
-                        CV</a>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-none">
+                        SAMANTHA<br /> <span class="text-neutral-700">ARSUA.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl font-light">
+                        Full-Stack Developer with UI/UX experience seeking a team to grow and ship with.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects"
+                            class="px-8 py-3 bg-white text-black font-bold hover:bg-gray-200 transition-all text-sm">View
+                            My
+                            Work</a>
+                        <a href="assets/cv/Arsua_Resume.pdf" download="Arsua_Resume.pdf"
+                            class="px-8 py-3 border border-white/20 text-white font-bold hover:bg-white/5 transition-all text-sm">Download
+                            CV</a>
+                    </div>
+                </div>
+                <div class="reveal hidden md:flex justify-end items-center">
+                    <div class="w-[400px] h-[400px] flex items-center justify-center">
+                        <dotlottie-wc src="https://lottie.host/c041b46a-9093-46ea-a849-148d5970603d/HjzZTQFZe2.lottie"
+                            style="width: 400px; height: 400px" class="transform scale-[2.5] origin-center" autoplay
+                            loop></dotlottie-wc>
+                    </div>
                 </div>
             </div>
         </section>
@@ -106,8 +118,8 @@
                 </div>
                 <div
                     class="reveal relative aspect-square max-w-md mx-auto w-full border border-white/5 bg-neutral-900 overflow-hidden flex items-center justify-center">
-                    <i data-lucide="user" class="w-20 h-20 text-white/5"></i>
-                    <!-- Replace with <img src="..." class="object-cover w-full h-full"> -->
+                    <img src="assets/img/photo.jpeg" alt="Samantha Arsua"
+                        class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
                 </div>
             </div>
         </section>
@@ -183,10 +195,10 @@
                             <i class="devicon-python-plain tech-icon text-3xl"></i>
                             <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Python</span>
                         </div>
-                        <div class="tech-card flex flex-col items-center gap-2 group">
+                        <!-- <div class="tech-card flex flex-col items-center gap-2 group">
                             <i class="devicon-flask-original tech-icon text-3xl"></i>
                             <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Flask</span>
-                        </div>
+                        </div> -->
                         <div class="tech-card flex flex-col items-center gap-2 group">
                             <i class="devicon-java-plain tech-icon text-3xl"></i>
                             <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Java</span>
@@ -279,7 +291,7 @@
                 <!-- Project Card 1 -->
                 <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
                     <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
-                        <img src="assets/img/website1.jpg" alt="DentaCare"
+                        <img src="assets/img/website1.png" alt="DentaCare"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold mb-2">DentaCare Clinic Management</h3>
@@ -305,7 +317,7 @@
                 <!-- Project Card 2 -->
                 <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
                     <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
-                        <img src="assets/img/website3.jpg" alt="iPhoneHub"
+                        <img src="assets/img/website2.png" alt="iPhoneHub"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold mb-2">iPhoneHub Store</h3>
@@ -329,7 +341,7 @@
                 <!-- Project Card 3 -->
                 <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
                     <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
-                        <img src="assets/img/website3.jpg" alt="Banana Leaf"
+                        <img src="assets/img/website3.png" alt="Banana Leaf"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Banana Leaf Disease Detection</h3>
@@ -353,7 +365,7 @@
                 <!-- Project Card 4 -->
                 <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
                     <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
-                        <img src="assets/img/image.png" alt="Panan Car Rental"
+                        <img src="assets/img/website4.png" alt="Panan Car Rental"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Panan Car Rental</h3>
@@ -375,7 +387,7 @@
                 <!-- Project Card 5 -->
                 <div class="project-item glass-card p-6 rounded-sm reveal" data-category="app">
                     <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
-                        <img src="assets/img/app1.jpg" alt="Hotel Management"
+                        <img src="assets/img/app1.png" alt="Hotel Management"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Hotel Property Management</h3>
@@ -421,7 +433,7 @@
                 <!-- Project Card 7 (UI Design) -->
                 <div class="project-item glass-card p-6 rounded-sm reveal" data-category="design">
                     <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
-                        <img src="assets/img/design1.jpg" alt="Ministry Platform"
+                        <img src="assets/img/ui1.png" alt="Ministry Platform"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Ministry Platform</h3>
@@ -449,22 +461,24 @@
                 <div class="reveal relative">
                     <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-white border-4 border-black">
                     </div>
-                    <h3 class="text-2xl font-bold">Senior Engineer</h3>
-                    <div class="text-neutral-500 text-sm mb-4">Tech Giants Inc. | 2022 — Present</div>
+                    <h3 class="text-2xl font-bold">Currently Seeking</h3>
+                    <div class="text-neutral-500 text-sm mb-4">Open to Opportunities | 2026 — Present</div>
                     <ul class="text-neutral-400 space-y-3 text-sm max-w-xl">
-                        <li>Architected scalable frontend systems using Micro-frontends.</li>
-                        <li>Reduced deployment latency by 45% using Edge functions.</li>
+                        <li>Actively looking for my first full-time role in Full-Stack Development or UI/UX Design.</li>
+                        <li>Open to remote, hybrid, or on-site positions in Davao City and beyond.</li>
                     </ul>
                 </div>
                 <div class="reveal relative">
                     <div
                         class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-neutral-800 border-4 border-black">
                     </div>
-                    <h3 class="text-2xl font-bold">Web Developer</h3>
-                    <div class="text-neutral-500 text-sm mb-4">Startup Lab | 2019 — 2022</div>
+                    <h3 class="text-2xl font-bold">UI/UX Designer Intern</h3>
+                    <div class="text-neutral-500 text-sm mb-4">Aquila Softwares Corporation · Davao City | July 2025 —
+                        August 2025</div>
                     <ul class="text-neutral-400 space-y-3 text-sm max-w-xl">
-                        <li>Developed 10+ MVP products for seed-stage startups.</li>
-                        <li>Lead the transition from REST to GraphQL API structures.</li>
+                        <li>Designed full UI/UX for 5 platform components including Landing Page, Login/Registration,
+                            and Admin Dashboard.</li>
+                        <li>Delivered intuitive module and quiz interfaces for ministry learning and evaluation.</li>
                     </ul>
                 </div>
             </div>
@@ -478,37 +492,27 @@
                 <div class="glass-card p-6 reveal flex flex-col">
                     <div
                         class="w-12 h-12 bg-neutral-900 border border-white/10 rounded mb-6 flex items-center justify-center">
-                        <i data-lucide="award" class="text-neutral-600"></i>
+                        <i data-lucide="database" class="text-neutral-600"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-1">AWS Solutions Architect</h3>
-                    <p class="text-xs text-neutral-500 mb-6">Amazon Web Services | Issued Jan 2024</p>
-                    <button
-                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-[10px] font-bold uppercase tracking-widest transition-all">View
-                        Certificate</button>
+                    <h3 class="text-lg font-bold mb-1">IT Specialist in Databases</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Certiport | Issued July 2025</p>
+                    <a href="https://www.credly.com/badges/98a8cdfc-d302-495d-9c00-e2cfb95e2ffb/public_url"
+                        target="_blank"
+                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-center text-[10px] font-bold uppercase tracking-widest transition-all">View
+                        Credentials</a>
                 </div>
                 <!-- Cert Card 2 -->
                 <div class="glass-card p-6 reveal flex flex-col">
                     <div
                         class="w-12 h-12 bg-neutral-900 border border-white/10 rounded mb-6 flex items-center justify-center">
-                        <i data-lucide="shield-check" class="text-neutral-600"></i>
+                        <i data-lucide="code-2" class="text-neutral-600"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-1">Professional Scrum Master</h3>
-                    <p class="text-xs text-neutral-500 mb-6">Scrum.org | Issued Aug 2023</p>
-                    <button
-                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-[10px] font-bold uppercase tracking-widest transition-all">View
-                        Certificate</button>
-                </div>
-                <!-- Cert Card 3 -->
-                <div class="glass-card p-6 reveal flex flex-col">
-                    <div
-                        class="w-12 h-12 bg-neutral-900 border border-white/10 rounded mb-6 flex items-center justify-center">
-                        <i data-lucide="badge-check" class="text-neutral-600"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-1">Google Cloud Professional</h3>
-                    <p class="text-xs text-neutral-500 mb-6">Google | Issued May 2023</p>
-                    <button
-                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-[10px] font-bold uppercase tracking-widest transition-all">View
-                        Certificate</button>
+                    <h3 class="text-lg font-bold mb-1">IT Specialist in HTML and CSS</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Certiport | Issued July 2025</p>
+                    <a href="https://www.credly.com/badges/0dd0daa6-ac4c-457d-8589-a4716e1a9bf4/public_url"
+                        target="_blank"
+                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-center text-[10px] font-bold uppercase tracking-widest transition-all">View
+                        Credentials</a>
                 </div>
             </div>
         </section>
@@ -520,16 +524,16 @@
                 <p class="text-neutral-500 mb-16">Whether you have a project in mind or just want to say hi, my inbox is
                     always open.</p>
 
-                <form class="space-y-4 text-left">
+                <form action="https://formspree.io/f/xrejpdwz" method="POST" class="space-y-4 text-left">
                     <div class="grid md:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Full Name"
+                        <input type="text" name="name" required placeholder="Full Name"
                             class="w-full bg-neutral-900 border border-white/10 px-6 py-4 rounded-sm focus:border-white outline-none transition-all placeholder:text-neutral-700">
-                        <input type="email" placeholder="Email Address"
+                        <input type="email" name="email" required placeholder="Email Address"
                             class="w-full bg-neutral-900 border border-white/10 px-6 py-4 rounded-sm focus:border-white outline-none transition-all placeholder:text-neutral-700">
                     </div>
-                    <textarea rows="5" placeholder="Your Message"
+                    <textarea name="message" rows="5" required placeholder="Your Message"
                         class="w-full bg-neutral-900 border border-white/10 px-6 py-4 rounded-sm focus:border-white outline-none transition-all placeholder:text-neutral-700"></textarea>
-                    <button
+                    <button type="submit"
                         class="w-full bg-white text-black font-bold py-4 hover:bg-neutral-200 transition-all uppercase tracking-[0.2em]">Send
                         Message</button>
                 </form>
