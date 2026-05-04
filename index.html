@@ -1,411 +1,557 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="scroll-smooth">
 
-        <!-- ===== SWIPER CSS ===== -->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        
-        <!-- ===== BOX ICONS ===== -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | High-End Minimalist</title>
 
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- CDNs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-        <title>Samantha Arsua</title>
-    </head>
-    <body>
-        <!--===== SCROLL TOP =====-->
-        <a href="#" class="scrolltop" id="scroll-top">
-            <i class='bx bx-chevron-up scrolltop__icon' ></i>
-        </a>
-        
-        <!--===== HEADER =====-->
-        <header class="l-header" id="header">
-            <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Samantha Arsua</a>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#certificates" class="nav__link">Certification</a></li>
-                        <li class="nav__item"><a href="#portfolio" class="nav__link">Projects</a></li>
-                        <!-- <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/modern.css">
+</head>
+
+<body class="selection:bg-white selection:text-black">
+
+    <!-- Background -->
+    <div class="fixed inset-0 grid-bg z-0 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold tracking-tighter">PORTFOLIO.</a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="nav-link hover:text-white transition-all py-1">About</a>
+                <a href="#skills" class="nav-link hover:text-white transition-all py-1">Skills</a>
+                <a href="#projects" class="nav-link hover:text-white transition-all py-1">Projects</a>
+                <a href="#experience" class="nav-link hover:text-white transition-all py-1">Experience</a>
+                <a href="#contact" class="nav-link hover:text-white transition-all py-1">Contact</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-bold md:hidden">
+        <button id="close-btn" class="absolute top-8 right-8 text-white"><i data-lucide="x"></i></button>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <main class="relative z-10">
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center px-6 max-w-7xl mx-auto">
+            <div class="reveal">
+                <!-- Available for Hire Badge -->
+                <div
+                    class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-neutral-900 border border-white/10 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-green-500 dot-pulse"></span>
+                    <span class="text-xs font-semibold tracking-widest uppercase">Available for Hire</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-none">
+                    SAMANTHA<br /> <span class="text-neutral-700">ARSUA.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl font-light">
+                    Full-Stack Engineer building minimalist, high-performance digital products for the modern web.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects"
+                        class="px-8 py-3 bg-white text-black font-bold hover:bg-gray-200 transition-all text-sm">View My
+                        Work</a>
+                    <a href="assets/cv/Arsua_Resume.pdf" download="Arsua_Resume.pdf"
+                        class="px-8 py-3 border border-white/20 text-white font-bold hover:bg-white/5 transition-all text-sm">Download
+                        CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="py-32 px-6 max-w-7xl mx-auto section-nav">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="text-sm uppercase tracking-[0.4em] text-neutral-500 mb-8 font-bold">01. Identity</h2>
+                    <p class="text-lg text-neutral-300 leading-relaxed mb-8">
+                        I am a Graduating Computer Science student who bridges the gap between
+                        design and development. With hands-on experience in full-stack
+                        development, UI/UX design, and machine learning, I specialize
+                        in building clean, functional, and user-centered digital solutions.
+                    </p>
+                    <p class="text-neutral-500 leading-relaxed">
+                        Based in Davao City, Philippines, open to remote opportunities
+                        worldwide. I focus on modern web technologies and turning
+                        real-world problems into impactful software.
+                    </p>
+                </div>
+                <div
+                    class="reveal relative aspect-square max-w-md mx-auto w-full border border-white/5 bg-neutral-900 overflow-hidden flex items-center justify-center">
+                    <i data-lucide="user" class="w-20 h-20 text-white/5"></i>
+                    <!-- Replace with <img src="..." class="object-cover w-full h-full"> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILLS SECTION -->
+        <section id="skills" class="py-32 px-6 max-w-7xl mx-auto section-nav border-t border-white/5">
+            <h2 class="text-sm uppercase tracking-[0.4em] text-neutral-500 mb-16 font-bold">02. Core Stack</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <!-- Frontend -->
+                <div class="reveal">
+                    <h3 class="text-white text-lg font-bold mb-8 border-b border-white/5 pb-4">Frontend</h3>
+                    <div class="grid grid-cols-4 gap-6">
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-html5-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">HTML5</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-css3-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">CSS3</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-javascript-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">JS</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-typescript-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">TS</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-react-original tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">React</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-nextjs-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Next.js</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-tailwindcss-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Tailwind</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-flutter-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Flutter</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-dart-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Dart</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-figma-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="reveal">
+                    <h3 class="text-white text-lg font-bold mb-8 border-b border-white/5 pb-4">Backend</h3>
+                    <div class="grid grid-cols-4 gap-6">
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-nodejs-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Node</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-php-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">PHP</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-laravel-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Laravel</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-python-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Python</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-flask-original tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Flask</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-java-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Java</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-spring-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Spring</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-mysql-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">MySQL</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-postgresql-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Postgres</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-mongodb-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">MongoDB</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-firebase-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Firebase</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-express-original tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Express</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="reveal">
+                    <h3 class="text-white text-lg font-bold mb-8 border-b border-white/5 pb-4">Tools & Others</h3>
+                    <div class="grid grid-cols-4 gap-6">
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-git-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Git</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-github-original tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">GitHub</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-postman-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Postman</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-trello-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Trello</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-notion-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Notion</span>
+                        </div>
+                        <div class="tech-card flex flex-col items-center gap-2 group">
+                            <i class="devicon-jira-plain tech-icon text-3xl"></i>
+                            <span class="text-[8px] uppercase text-neutral-500 group-hover:text-white">Jira</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS SECTION -->
+        <section id="projects" class="py-32 px-6 max-w-7xl mx-auto section-nav border-t border-white/5">
+
+            <h2 class="text-sm uppercase tracking-[0.4em] text-neutral-500 mb-6 font-bold reveal">03. Selected Works
+            </h2>
+            <div class="text-center mb-16">
+                <!-- CENTERED FILTER NAVIGATION -->
+                <div
+                    class="reveal flex flex-wrap justify-center items-center gap-4 md:gap-8 mt-8 border-b border-white/5 pb-6">
+                    <button
+                        class="filter-btn active-filter text-[11px] uppercase tracking-[0.2em] font-bold transition-all px-4 py-2 hover:text-white"
+                        data-filter="all">All</button>
+                    <button
+                        class="filter-btn text-neutral-500 text-[11px] uppercase tracking-[0.2em] font-bold transition-all px-4 py-2 hover:text-white"
+                        data-filter="website">Websites</button>
+                    <button
+                        class="filter-btn text-neutral-500 text-[11px] uppercase tracking-[0.2em] font-bold transition-all px-4 py-2 hover:text-white"
+                        data-filter="app">Apps</button>
+                    <button
+                        class="filter-btn text-neutral-500 text-[11px] uppercase tracking-[0.2em] font-bold transition-all px-4 py-2 hover:text-white"
+                        data-filter="design">UI Design</button>
+                </div>
+            </div>
+
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
+                    <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
+                        <img src="assets/img/website1.jpg" alt="DentaCare"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">DentaCare Clinic Management</h3>
+                    <p class="text-gray-400 text-sm mb-4">A modern full-stack dental clinic management platform with
+                        RBAC, patient records, appointment scheduling, billing/invoices, and notifications.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Next.js</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Express.js</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">TypeScript</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Tailwind</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">MongoDB</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/samanthagwynetha/dental-clinic-system" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                class="devicon-github-original text-lg"></i> Code</a>
+                        <a href="https://dental-clinic-system-three.vercel.app/login" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                data-lucide="external-link" class="w-3 h-3"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
+                    <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
+                        <img src="assets/img/website3.jpg" alt="iPhoneHub"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">iPhoneHub Store</h3>
+                    <p class="text-gray-400 text-sm mb-4">A full-stack web e-commerce platform for buying and selling
+                        both brand-new
+                        and second-hand iPhones.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">React</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">TypeScript</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Laravel-PHP</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">PostgreSQL</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Inertia.js</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/samanthagwynetha/IphoneHubStore" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                class="devicon-github-original text-lg"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
+                    <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
+                        <img src="assets/img/website3.jpg" alt="Banana Leaf"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Banana Leaf Disease Detection</h3>
+                    <p class="text-gray-400 text-sm mb-4">Optimized deep learning model for classifying Sigatoka and
+                        Cordana banana diseases, delivering faster training while maintaining high accuracy.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">HTML</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Python</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">JavaScript</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/samanthagwynetha/Thesis-Banana-CNN" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                class="devicon-github-original text-lg"></i> Code</a>
+                        <a href="https://thesis-banana-cnn.onrender.com" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                data-lucide="external-link" class="w-3 h-3"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-item glass-card p-6 rounded-sm reveal" data-category="website">
+                    <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
+                        <img src="assets/img/image.png" alt="Panan Car Rental"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Panan Car Rental</h3>
+                    <p class="text-gray-400 text-sm mb-4">A web-based car rental platform to manage reservations,
+                        vehicles, and user profile.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">PHP</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">MySQL</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">CSS</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">JavaScript</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/samanthagwynetha/Car-Rental-System" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                class="devicon-github-original text-lg"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-item glass-card p-6 rounded-sm reveal" data-category="app">
+                    <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
+                        <img src="assets/img/app1.jpg" alt="Hotel Management"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Hotel Property Management</h3>
+                    <p class="text-gray-400 text-sm mb-4">A cross-platform mobile app for hotel room management and
+                        bookings,
+                        built with Flutter and backed by Firebase for realtime data and user authentication.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Flutter</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Firebase</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Dart</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/samanthagwynetha/HotelPropertyManagement" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                class="devicon-github-original text-lg"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-item glass-card p-6 rounded-sm reveal" data-category="app">
+                    <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
+                        <img src="assets/img/app2.jpg" alt="Vent Space"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Vent Space</h3>
+                    <p class="text-gray-400 text-sm mb-4">A simple Flutter app where users can sign up, sign in, and
+                        freely
+                        share their thoughts and feelings in a safe, always-available space.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Flutter</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Firebase</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Dart</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/samanthagwynetha/HotelPropertyManagement" target="_blank"
+                            class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                class="devicon-github-original text-lg"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 7 (UI Design) -->
+                <div class="project-item glass-card p-6 rounded-sm reveal" data-category="design">
+                    <div class="h-40 bg-neutral-900 mb-6 rounded-sm overflow-hidden border border-white/5">
+                        <img src="assets/img/design1.jpg" alt="Ministry Platform"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ministry Platform</h3>
+                    <p class="text-gray-400 text-sm mb-4">End-to-end UI/UX design for a ministry
+                        learning platform with auth, modules, quizzes, and
+                        admin dashboard.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Figma</span>
+                        <span class="text-[10px] uppercase border border-white/10 px-2 py-1">Auto-Layout</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://www.figma.com/design/UvJP4UepA3nfcFqLH2Nz00/Truth-and-Life-Ministries?node-id=4-8&p=f&t=Uhv1ZuwQceF9LIHU-0"
+                            target="_blank" class="text-xs font-bold hover:underline flex items-center gap-1"><i
+                                data-lucide="external-link" class="w-3 h-3"></i> Figma</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. EXPERIENCE SECTION -->
+        <section id="experience" class="py-32 px-6 max-w-4xl mx-auto section-nav border-t border-white/5">
+            <h2 class="text-sm uppercase tracking-[0.4em] text-neutral-500 mb-16 font-bold">04. Professional Path</h2>
+            <div class="space-y-12 relative border-l border-white/10 pl-8">
+                <div class="reveal relative">
+                    <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-white border-4 border-black">
+                    </div>
+                    <h3 class="text-2xl font-bold">Senior Engineer</h3>
+                    <div class="text-neutral-500 text-sm mb-4">Tech Giants Inc. | 2022 — Present</div>
+                    <ul class="text-neutral-400 space-y-3 text-sm max-w-xl">
+                        <li>Architected scalable frontend systems using Micro-frontends.</li>
+                        <li>Reduced deployment latency by 45% using Edge functions.</li>
                     </ul>
                 </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <div class="reveal relative">
+                    <div
+                        class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-neutral-800 border-4 border-black">
+                    </div>
+                    <h3 class="text-2xl font-bold">Web Developer</h3>
+                    <div class="text-neutral-500 text-sm mb-4">Startup Lab | 2019 — 2022</div>
+                    <ul class="text-neutral-400 space-y-3 text-sm max-w-xl">
+                        <li>Developed 10+ MVP products for seed-stage startups.</li>
+                        <li>Lead the transition from REST to GraphQL API structures.</li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home" id="home">
-                <div class="home__container bd-container bd-grid">
-                    <div class="parent-container">
-                        <div class="home__data">
-                            <span class="home__greeting">Hello, My name is</span>
-                            <h1 class="home__name">Samantha Arsua</h1>
-                            <span class="home__profession">Student Developer</span>
-                            
-                            <div class="home__social">
-                                <a href="https://www.linkedin.com/in/samanthagwynetha/" class="footer__link"><i class='bx bxl-linkedin' ></i></a>
-                                <a href="https://github.com/samanthagwynetha" class="footer__link"><i class='bx bxl-github' ></i></a>
-                                <a href="https://www.behance.net/samantharsua" class="footer__link"><i class='bx bxl-dribbble' ></i></a>
-                            </div>
-
-                             <a download="" href="assets/cv/Arsua_Resume.pdf" class="home__button">Download Cv</a>
-                        </div>
-                    </div>
-                    
-
-<!-- 
-                    <div class="home__img">
-                        <img src="assets/img/home.jpg" alt="">
-                    </div> -->
-                </div>
-            </section>
-            
-            <!--===== ABOUT =====-->
-            <section class="about section bd-container" id="about">
-                <span class="section-subtitle">My History</span>
-                <h2 class="section-title">About Me</h2>
-                
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/devme.webp" alt="About me image">
-                    </div>
-                    
-                    <div class="about__data bd-grid">
-
-                        <p class="about__description about__text"> Hi, I'm Samantha Arsua, a Computer Science student from the University of Mindanao. I'm still learning and growing, but I genuinely enjoy building things with code whether it’s websites, small systems, or simple designs. I’ve been exploring full-stack development lately, and I love figuring things out by doing.</p>
-
-                </div>
-            </section>
-
- <section class="tech section bd-container" id="tech">
-    <span class="section-subtitle">My Skills</span>
-    <h2 class="section-title">Tech Stack</h2>
-
-    <div class="tech__container bd-grid">
-        <!-- Languages & Frameworks -->
-        <div class="tech__box">
-            <i class='bx bxl-html5 tech__icon'></i>
-            <h3 class="tech__title">HTML5</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-css3 tech__icon'></i>
-            <h3 class="tech__title">CSS3</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-javascript tech__icon'></i>
-            <h3 class="tech__title">JavaScript</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-typescript tech__icon'></i>
-            <h3 class="tech__title">TypeScript</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-java tech__icon'></i>
-            <h3 class="tech__title">Java</h3>        
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-php tech__icon'></i>
-            <h3 class="tech__title">PHP</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-python tech__icon'></i>
-            <h3 class="tech__title">Python</h3>
-        </div>
-
-        <!-- Frameworks & Libraries -->
-        <div class="tech__box">
-            <i class='bx bxl-flutter tech__icon'></i>
-            <h3 class="tech__title">Flutter</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-react tech__icon'></i>
-            <h3 class="tech__title">React</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-nodejs tech__icon'></i>
-            <h3 class="tech__title">Node.js</h3>
-        </div>
-
-        <!-- Databases & Tools -->
-        <div class="tech__box">
-            <i class='bx bxs-data tech__icon'></i>
-            <h3 class="tech__title">MySQL</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-firebase tech__icon'></i>
-            <h3 class="tech__title">Firebase</h3>
-        </div>
-
-        <!-- Others -->
-        <div class="tech__box">
-            <i class='bx bxl-git tech__icon'></i>
-            <h3 class="tech__title">Git</h3>
-        </div>
-
-        <div class="tech__box">
-            <i class='bx bxl-github tech__icon'></i>
-            <h3 class="tech__title">GitHub</h3>
-        </div>
-
-    </div>
-</section>
-
-                  <!--===== TESTIMONIAL =====-->
-                  <section class="testimonial section bd-container" id="certificates">
-                    <span class="section-subtitle">My Certification</span>
-                    <h2 class="section-title">Certificate</h2>
-    
-                    <div class="testimonial__container swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/img/cert1.png" alt="" class="testimonial__img">   
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="assets/img/cert2.png" alt="" class="testimonial__img">   
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="assets/img/cert3.png" alt="" class="testimonial__img">   
-                            </div>
-                            
-                  
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-
-                </section>
-
-                <img src="" alt="">
-
-
-            <!--===== SERVICES =====-->
-            <section class="services section bd-container" id="services">
-                <span class="section-subtitle">What i offer</span>
-                <h2 class="section-title">Services</h2>
-
-                <div class="services__container bd-grid">
-                    <div class="services__data">
-                        <i class='bx bx-mobile services__icon' ></i>
-                        <h3 class="servics__title">App development</h3>
-                        <!-- <p class="services__description">Service that I offer and work, with years of experience in the work area.</p> -->
-                        <!-- <a href="#" class="button">Know More</a> -->
-                    </div>
-
-                    <div class="services__data">
-                        <i class='bx bx-laptop services__icon' ></i>
-                        <h3 class="servics__title">Web development</h3>
-                        <!-- <p class="services__description">Service that I offer and work, with years of experience in the work area.</p> -->
-                        <!-- <a href="#" class="button">Know More</a> -->
-                    </div>
-
-                    <div class="services__data">
-                        <i class='bx bx-pen services__icon' ></i>
-                        <h3 class="servics__title">Graphic Design</h3>
-                        <!-- <p class="services__description">Service that I offer and work, with years of experience in the work area.</p> -->
-                        <!-- <a href="#" class="button">Know More</a> -->
-                    </div>
-                </div>
-            </section>
-            
-            <!--===== PROJECT IN MIND =====-->
-            <section class="project section bd-container">
-                <div class="project__container bd-grid">
-                    <div class="project__data">
-                        <i class='bx bx-chat project__icon'></i>
-
-                        <div>
-                            <h2 class="project__title">Project in mind</h2>
-                            <p class="project__description">Hire me to carry out the following projects.</p>
-                        </div>
-
-                        <div>
-                             <a href="#contact" class="button button-white">Hire me</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-
-            <!--===== PORTFOLIO =====-->
-            <section class="portfolio section bd-container" id="portfolio">
-                <span class="section-subtitle">My recent works</span>
-                <h2 class="section-title">Portfolio</h2>
-
-                <div class="portfolio__nav">
-                    <span class="portfolio__item active-portfolio" data-filter="all">All</span>
-                    <span class="portfolio__item" data-filter=".web">Web</span>
-                    <span class="portfolio__item" data-filter=".ux">Design</span>
-                    <span class="portfolio__item" data-filter=".app">App</span>
-                </div>
-
-                <div class="portfolio__container bd-grid">
-                    <div class="portfolio__content mix web">
-                        <a href="#"><img src="assets/img/website1.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Web development</span>
-                            <a href="#"><h2 class="portfolio__title">Food Recipe Website</h2></a>
-                            <a href="https://github.com/samanthagwynetha/caon" class="button button-link ">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content mix web">
-                        <a href="#"><img src="assets/img/website2.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Web development</span>
-                            <a href="#"><h2 class="portfolio__title">Car Rental System</h2></a>
-                            <a href="https://github.com/samanthagwynetha/CarRentalSystem" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content mix web">
-                        <a href="#"><img src="assets/img/website3.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Web development</span>
-                            <a href="#"><h2 class="portfolio__title">iPhoneHub E-commerce Plarform</h2></a>
-                            <a href="https://github.com/samanthagwynetha/IphoneHubStore" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <div class="portfolio__content mix ux">
-                        <a href="#"><img src="assets/img/design1.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Design</span>
-                            <a href="#"><h2 class="portfolio__title">Image Colorization</h2></a>
-                            <a href="#" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content mix ux">
-                        <a href="#"><img src="assets/img/design2.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Design</span>
-                            <a href="#"><h2 class="portfolio__title">Poster </h2></a>
-                            <a href="#" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content mix app">
-                        <a href="#"><img src="assets/img/app1.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Mobile app</span>
-                            <a href="#"><h2 class="portfolio__title">New Balance Interface</h2></a>
-                            <a href="https://github.com/samanthagwynetha/e-shoes_UI" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content mix app">
-                        <a href="#"><img src="assets/img/app2.jpg" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Mobile app</span>
-                            <a href="#"><h2 class="portfolio__title">Ventspace</h2></a>
-                            <a href="https://github.com/samanthagwynetha/ventspace" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content mix app">
-                        <a href="#"><img src="assets/img/app3.png" alt="" class="portfolio__img"></a>
-                        <div class="portfolio__data">
-                            <span class="portfolio__subtitle">Mobile app</span>
-                            <a href="#"><h2 class="portfolio__title">Hotel Property Management</h2></a>
-                            <a href="https://github.com/samanthagwynetha/HotelPropertyManagement" class="button button-link">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-
-            <!--===== CONTACTME =====-->
-            <section class="contact section bd-container" id="contact">
-                <span class="section-subtitle">For projects</span>
-                <h2 class="section-title">Contact Me</h2>
-
-                <div class="contact__container bd-grid">
-                    <div class="contact__content bd-grid">
-                        <div class="contact__box">
-                            <i class='bx bx-home contact__icon' ></i>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contact__description">Philippines</span>
-                        </div>
-
-                        <div class="contact__box">
-                            <i class='bx bx-phone contact__icon' ></i>
-                            <h3 class="contact__title">Phone</h3>
-                            <span class="contact__description">09156616504</span>
-                        </div>
-
-                        <div class="contact__box">
-                            <i class='bx bx-envelope contact__icon' ></i>
-                            <h3 class="contact__title">Gmail</h3>
-                            <span class="contact__description">uunaaah@gmail.com</span>
-                        </div>
-
-                        <div class="contact__box">
-                            <i class='bx bx-envelope contact__icon' ></i>
-                            <h3 class="contact__title">Chat</h3>
-                           <div>
-                                <a href="https://wa.me/qr/ZCD6NUI446RFD1" class="contact__social"><i class='bx bxl-whatsapp-square' ></i></a>
-                                <a href="https://www.instagram.com/gwynthyno/" class="contact__social"><i class='bx bxl-instagram' ></i></a>
-                                <a href="https://m.me/samantha.arsua" class="contact__social"><i class='bx bxl-messenger' ></i></a>
-                           </div>
-                        </div>
-                    </div>
-                
-                    <form action="https://formspree.io/f/mvgprqnj" method="POST" class="contact__form">
-                        <div class="contact__inputs">
-                            <input type="text" name="first_name" placeholder="Name" class="contact__input">
-                            <input type="email" name="email" placeholder="Email" class="contact__input" required>
-                        </div>
-
-                        <div class="contact__inputs">
-                            <input type="text" name="project" placeholder="Project" class="contact__input">
-                            <input type="number" name="number" placeholder="Number" class="contact__input">
-                        </div>
-
-                        <textarea name="message" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
-                  
-                        <input type="submit" value="Send Message" class="button contact__button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <div class="footer__container bd-container">
-                <h1 class="footer__title">Samantha Arsua</h1>
             </div>
-        </footer>
-        
-        <!-- ===== MIXITUP FILTER ===== -->
-        <script src="assets/js/mixitup.min.js"></script>
-        
-        <!-- ===== SWIPER JS ===== -->
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        
-        <!-- ===== GSAP ===== -->
-        <script src="assets/js/gsap.min.js"></script>
-        
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        </section>
+
+        <!-- 6. CERTIFICATIONS SECTION -->
+        <section id="certifications" class="py-32 px-6 max-w-7xl mx-auto border-t border-white/5">
+            <h2 class="text-sm uppercase tracking-[0.4em] text-neutral-500 mb-16 font-bold">06. Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cert Card 1 -->
+                <div class="glass-card p-6 reveal flex flex-col">
+                    <div
+                        class="w-12 h-12 bg-neutral-900 border border-white/10 rounded mb-6 flex items-center justify-center">
+                        <i data-lucide="award" class="text-neutral-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">AWS Solutions Architect</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Amazon Web Services | Issued Jan 2024</p>
+                    <button
+                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-[10px] font-bold uppercase tracking-widest transition-all">View
+                        Certificate</button>
+                </div>
+                <!-- Cert Card 2 -->
+                <div class="glass-card p-6 reveal flex flex-col">
+                    <div
+                        class="w-12 h-12 bg-neutral-900 border border-white/10 rounded mb-6 flex items-center justify-center">
+                        <i data-lucide="shield-check" class="text-neutral-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Professional Scrum Master</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Scrum.org | Issued Aug 2023</p>
+                    <button
+                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-[10px] font-bold uppercase tracking-widest transition-all">View
+                        Certificate</button>
+                </div>
+                <!-- Cert Card 3 -->
+                <div class="glass-card p-6 reveal flex flex-col">
+                    <div
+                        class="w-12 h-12 bg-neutral-900 border border-white/10 rounded mb-6 flex items-center justify-center">
+                        <i data-lucide="badge-check" class="text-neutral-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Google Cloud Professional</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Google | Issued May 2023</p>
+                    <button
+                        class="mt-auto py-2 border border-white/5 hover:border-white/20 text-[10px] font-bold uppercase tracking-widest transition-all">View
+                        Certificate</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT SECTION -->
+        <section id="contact" class="py-32 px-6 max-w-3xl mx-auto section-nav border-t border-white/5">
+            <div class="reveal text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8">Let's Work Together.</h2>
+                <p class="text-neutral-500 mb-16">Whether you have a project in mind or just want to say hi, my inbox is
+                    always open.</p>
+
+                <form class="space-y-4 text-left">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Full Name"
+                            class="w-full bg-neutral-900 border border-white/10 px-6 py-4 rounded-sm focus:border-white outline-none transition-all placeholder:text-neutral-700">
+                        <input type="email" placeholder="Email Address"
+                            class="w-full bg-neutral-900 border border-white/10 px-6 py-4 rounded-sm focus:border-white outline-none transition-all placeholder:text-neutral-700">
+                    </div>
+                    <textarea rows="5" placeholder="Your Message"
+                        class="w-full bg-neutral-900 border border-white/10 px-6 py-4 rounded-sm focus:border-white outline-none transition-all placeholder:text-neutral-700"></textarea>
+                    <button
+                        class="w-full bg-white text-black font-bold py-4 hover:bg-neutral-200 transition-all uppercase tracking-[0.2em]">Send
+                        Message</button>
+                </form>
+
+                <div class="mt-20 flex justify-center gap-10">
+                    <a href="#" class="text-neutral-500 hover:text-white transition-colors"><i
+                            data-lucide="github"></i></a>
+                    <a href="#" class="text-neutral-500 hover:text-white transition-colors"><i
+                            data-lucide="linkedin"></i></a>
+                    <a href="#" class="text-neutral-500 hover:text-white transition-colors"><i
+                            data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 px-6 border-t border-white/5 text-center text-xs text-neutral-700 tracking-[0.4em] uppercase">
+        Designed & Built by Jane Doe &copy; 2026
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/modern.js"></script>
+</body>
+
 </html>
