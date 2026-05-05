@@ -54,9 +54,9 @@ To run this project locally:
 
 I am currently **Available for Hire** and open to remote opportunities worldwide.
 
-- **LinkedIn:** [linkedin.com/in/samantharsua](https://linkedin.com/in/samantharsua) (Update with your link)
+- **LinkedIn:** [linkedin.com/in/samantharsua](https://www.linkedin.com/in/samanthagwynetha/) 
 - **GitHub:** [@samanthagwynetha](https://github.com/samanthagwynetha)
-- **Email:** [your-email@example.com](mailto:your-email@example.com)
+- **Email:** [samanathagwynetha@gmail.com](mailto:samanthagwynetha@gmail.com)
 
 ---
 
